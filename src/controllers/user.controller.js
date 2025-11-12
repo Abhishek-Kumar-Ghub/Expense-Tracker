@@ -21,7 +21,6 @@ catch(error){
     res.status(500).json({message:error.message})
 }
 }
-
 const login=async(req,res)=>{
     try{
         const{email,password}=req.body;
@@ -38,6 +37,5 @@ const login=async(req,res)=>{
     }catch(error){
         console.error("error in login:", error)
         res.status(500).json({message:"internal server error"})
-    }
-}
+    }}
 export{signup , login}
